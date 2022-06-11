@@ -25,7 +25,7 @@ tmux new-window -dt $selected_name -c $selected
 # If tmux is not running OR it is running but you're not inside tmux
 if [[ -z $tmux_running || -z $TMUX ]]; then
     # TODO: not attaching from terminal automatically
-    tmux attach-session -t $selected_name
+    # tmux attach-session -t $selected_name
     exit 0
 fi
 
