@@ -4,9 +4,14 @@ function M.edit_neovim()
   -- require("telescope.builtin").find_files({
   require('telescope.builtin').find_files({
     path_display = { 'shorten' },
-    cwd = '~/.config/nvim',
+    cwd = '~/dotfiles',
     prompt_title = '~ dotfiles ~',
     height = 10,
+    search_dirs = {
+      '~/dotfiles/nvim/.config/nvim',
+      '~/dotfiles/tmux/.config/tmux',
+      '~/dotfiles/kitty/.config/kitty',
+    },
 
     layout_strategy = 'horizontal',
     -- layout_strategy = 'vertical',
