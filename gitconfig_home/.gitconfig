@@ -1,0 +1,5 @@
+[user]
+  name = Mike Doyle
+  email = mikedoyle007@gmail.com
+[include]
+  path = ~/.gitconfig_shared
