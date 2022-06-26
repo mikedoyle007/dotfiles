@@ -12,6 +12,11 @@
   line-numbers = true
   syntax-theme = gruvbox-dark
   line-numbers-zero-style = 'white'
+  plus-style = 'syntax auto'
+  minus-style = 'syntax auto'
+  plus-emph-style = 'green bold auto'
+  minus-emph-style = 'red bold auto'
+  zero-style = 'dim syntax'
 [merge]
     conflictstyle = diff3
 [alias]
