@@ -3,6 +3,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/michaeldoyle/.oh-my-zsh
 
+# Import shared zsh config
+source ~/.zshrc_shared
+
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/michaeldoyle/Desktop/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/michaeldoyle/Desktop/google-cloud-sdk/path.zsh.inc'; fi
 
@@ -22,9 +25,6 @@ export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
 export PATH=$PATH/:$ANDROID_HOME/platform-tools
 export PATH=$PATH/:$ANDROID_SDK_ROOT/platform-tools
-
-# Import shared zsh config
-source ~/.zshrc_shared
 
 # zsh-syntax-highlighting (Needs to be imported last)
 source /Users/michaeldoyle/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
