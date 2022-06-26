@@ -1,0 +1,129 @@
+# Shared ZSH config
+
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+
+# To use 'code .' in terminal
+export PATH="$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+
+# --- Theme 2: Gruvbox ---
+ZSH_THEME="gruvbox" # gruvbox
+SOLARIZED_THEME="dark" # gruvbox
+
+# --- Theme 1 Settings Start ---
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status, custom_env, time)
+POWERLEVEL9K_CUSTOM_ENV="export | grep ENVIRONMENT | awk -F'=' '{print $2}'"
+
+# Plugins
+plugins=(
+  colored-man-pages
+  extract
+  git
+  git-open
+  last-working-dir
+  osx
+  sudo
+  tmux
+  vi-mode
+  web-search
+  z
+  zsh-autosuggestions
+  zsh_reload
+)
+
+source $ZSH/oh-my-zsh.sh
+
+### ALIASES ###
+
+# Git
+alias gs="git status"
+alias gsl="git stash list"
+alias gsa="git stash apply --"
+alias gsv="git stash show -p --"
+alias gpull="git pull"
+alias gpush="git push"
+alias gd="git diff"
+# alias gd="git difftool --no-symlinks --dir-diff"
+alias gb="git branch"
+alias gbn="git checkout -b "
+alias gD="gb | fzf -m | xargs git branch -D"
+alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --branches"
+alias gitlog="git log --pretty=oneline --abbrev-commit --graph --decorate --all"
+# Trying out 2 options to see which I like best
+alias lg="lazygit"
+alias gg="lazygit"
+
+# NPM project commands
+alias n="npm run --"
+
+# Tmux
+alias t="tmux --"
+alias ta="tmux a"
+alias tn="tmux new -s"
+alias tls="tmux ls"
+tmux-sessionizer() {
+  bash ~/.config/scripts/tmux-sessionizer.sh
+}
+zle -N tmux-sessionizer
+bindkey '^f' tmux-sessionizer
+
+#alias ls="ls -l"
+alias ytgui="pythonw /usr/local/lib/python2.7/site-packages/youtube_dl_gui/__main__.py&"
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
+# Reload .zshrc file
+alias reload="source ~/.zshrc"
+
+# Get IP address
+alias myip="curl http://ipecho.net/plain; echo" # Public facing ip address
+alias ip="ipconfig getifaddr en1"
+
+# Vim
+alias vim="nvim"
+alias v="nvim"
+alias v.="nvim ."
+
+# Config files
+alias .zshrc="vim ~/.zshrc"
+alias zshrc="vim ~/.zshrc"
+
+# history
+alias h="history"
+alias hist="history"
+
+# Other aliases
+alias usage="du -h -d1"
+alias runp="lsof -i "
+alias ..="cd .."
+alias ...="cd ../.."
+
+#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# For brew, at least
+export PATH=/usr/local/bin:$PATH
+
+# NVM Stuff
+export NVM_DIR="$HOME/.nvm"
+# Old version below was used prior to running 'brew upgrade'
+# . "$(brew --prefix nvm)/nvm.sh"
+# This loads nvm
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"
+# This loads nvm bash_completion
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"
+
+# pyenv
+# https://opensource.com/article/19/5/python-3-default-mac#what-to-do
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# mysql
+export PATH="/usr/local/mysql/bin:$PATH"
+
