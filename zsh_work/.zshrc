@@ -3,9 +3,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/mdoyle/.oh-my-zsh"
 
-# Import shared zsh config
-source ~/.zshrc_shared
-
 # Fix issue: nsecure completion-dependent directories detected
 ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
@@ -41,6 +38,9 @@ function unsetEnv() {
 export NVM_DIR="/Users/mdoyle/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 source /usr/local/opt/powerlevel9k/powerlevel9k.zsh-theme
+
+# Import shared zsh config
+source ~/.zshrc_shared
 
 # zsh-syntax-highlighting (Needs to be imported last)
 source /Users/mdoyle/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
