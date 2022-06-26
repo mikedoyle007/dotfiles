@@ -17,3 +17,6 @@ git:
   paging:
     colorArg: always
     pager: delta --dark --paging=never
+  diffContextSize: 9999999
+  increaseContextInDiffView: '}'
+  decreaseContextInDiffView: '{'
