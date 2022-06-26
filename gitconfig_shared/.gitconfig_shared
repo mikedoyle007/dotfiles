@@ -11,6 +11,7 @@
   side-by-side = true
   line-numbers = true
   syntax-theme = gruvbox-dark
+  line-numbers-zero-style = 'white'
 [merge]
     conflictstyle = diff3
 [alias]
