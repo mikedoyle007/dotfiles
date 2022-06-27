@@ -9,8 +9,17 @@ function M.edit_neovim()
     height = 10,
     search_dirs = {
       '~/dotfiles/nvim/.config/nvim',
-      '~/dotfiles/tmux/.config/tmux',
+      '~/dotfiles/gitconfig_home',
+      '~/dotfiles/gitconfig_shared',
+      '~/dotfiles/gitconfig_work',
       '~/dotfiles/kitty/.config/kitty',
+      '~/dotfiles/lazygit/Library/Application Support/lazygit',
+      '~/dotfiles/scripts/.config/scripts',
+      '~/dotfiles/scripts_work/.config/scripts',
+      '~/dotfiles/tmux/.config/tmux',
+      '~/dotfiles/zsh_home',
+      '~/dotfiles/zsh_shared',
+      '~/dotfiles/zsh_work',
     },
 
     layout_strategy = 'horizontal',
