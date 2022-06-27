@@ -12,6 +12,7 @@ gui:
     selectedRangeBgColor:
       - underline
   showIcons: true
+  sidePanelWidth: 0.2
 
 git:
   paging:
