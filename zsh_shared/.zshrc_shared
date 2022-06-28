@@ -75,6 +75,9 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 alias reload="source ~/.zshrc"
 alias src="exec zsh"
 
+# Clear screen
+alias c="clear"
+
 # Get IP address
 alias myip="curl http://ipecho.net/plain; echo" # Public facing ip address
 alias ip="ipconfig getifaddr en1"
