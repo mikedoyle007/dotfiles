@@ -41,7 +41,8 @@ local options = {
   inccommand = "split",                       -- shows partial off-screen results in a preview window
   -- guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20",
   guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20",
-  winbar = "%=%m %f",                      -- Shows file path in top right corner with modified flag [+]
+  -- winbar = "%=%m %f",                      -- Shows file path in top right corner with modified flag [+]
+  winbar = "%f %m",                      -- Shows file path in top left corner with modified flag [+]
 }
 
 vim.opt.shortmess:append "c"
