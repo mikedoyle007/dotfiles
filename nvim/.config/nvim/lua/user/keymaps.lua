@@ -86,7 +86,7 @@ keymap("n", "<C-/>", "<cmd>lua require('user.customTelescope').curr_buff()<cr>",
 -- keymap("n", "<leader>gs", ":G<CR>", opts)
 
 -- Neogit --
-keymap("n", "<leader>gs", ":Neogit<CR>", opts)
+-- keymap("n", "<leader>gs", ":Neogit<CR>", opts)
 
 -- Diffview --
 -- keymap("n", "<C-S-G>", ":DiffviewOpen<CR>", opts)
